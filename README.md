@@ -182,4 +182,6 @@ export class AuthCodeGuard implements CanActivate {
     ])
   ]
  ```
+## Project structure
 
+![alt text](https://i.imgur.com/wyo1ulS.png "Structure")
