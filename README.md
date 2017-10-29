@@ -119,5 +119,64 @@ export class AuthCodeGuard implements CanActivate {
 
   }
 }
-
 ```
+
+##### app.module.ts
+```javascript
+  imports: [
+    BrowserModule,
+    FormsModule,
+    PasswordStrengthBarModule,
+    HttpModule,
+    OrderModule,
+    ReactiveFormsModule,
+    NgbModule.forRoot(),
+    RouterModule.forRoot([
+      {
+        path: '',
+        component: LoginComponent
+      },
+      {
+        path: 'login',
+        component: LoginComponent
+      },
+      {
+        path: 'activation',
+        //canActivate: [AuthGuard],
+        component: ActivationComponent
+      },
+      {
+        path: 'verification',
+        canActivate: [AuthGuard],
+        component: VerificationComponent
+      },
+      {
+        path: 'forgotpassword',
+        component: ForgotPasswordComponent
+      },
+      {
+        path: 'resetpassword',
+        component: ResetPasswordComponent
+      },
+      {
+        path: 'main',
+        canActivate: [AuthCodeGuard],
+        component: MainComponent
+      },
+      {
+        path: 'main/:org',
+        canActivate: [AuthCodeGuard],
+        component: OrganizationsComponent
+      },
+      {
+        path: 'main/:org/:id',
+        canActivate: [AuthCodeGuard],
+        component: OrganizationUsersComponent
+      },
+      {
+        path: '**',
+        redirectTo: '/login'
+      }
+    ])
+  ]
+ ```
