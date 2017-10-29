@@ -7,7 +7,7 @@ Managing visible elements - should ony be used for small pieces of code, since i
 For this project I used this directive to hide element like buttons, table rows, links, texts.
 
 ## DEMO preview
-![alt text](https://i.imgur.com/ItvRimL.gifv "Demo IMS")
+[Watch functionality DEMO (presetation only)](https://imgur.com/ItvRimL "Application DEMO video")
 
 ##### role-permissions.directive.ts
 ```javascript
