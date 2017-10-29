@@ -6,6 +6,8 @@ This presentation of live project - for demonstration purposes only.
 Managing visible elements - should ony be used for small pieces of code, since it's not structural directive like ngIf.
 For this project I used this directive to hide element like buttons, table rows, links, texts.
 
+## DEMO preview
+![alt text](https://i.imgur.com/ItvRimL.gifv "Demo IMS")
 
 ##### role-permissions.directive.ts
 ```javascript
@@ -180,3 +182,4 @@ export class AuthCodeGuard implements CanActivate {
     ])
   ]
  ```
+
