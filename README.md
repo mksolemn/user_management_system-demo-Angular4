@@ -1,13 +1,53 @@
 # User Management system build with Angular4
-User management system build using Angular4 bootstrap with examples how to manage user roles using Angular.
+User management system single page application, built using Angular4 bootstrap with examples how to manage user roles using Angular.
 This presentation of live project - for demonstration purposes only.
+
+## DEMO preview
+
+### Login page
+Includes, 2 step authentification (sms code) and "forgot password" page.
+All forms have unique validation and are Reactive. Some forms are validate by response received from REST api others are validated only on front end, for such things as allowed characters/symbols.
+- login form
+![alt text](https://raw.githubusercontent.com/mksolemn/user_management_system-demo-Angular4/master/img/login.jpg "Login")
+
+- form validation
+![alt text](https://raw.githubusercontent.com/mksolemn/user_management_system-demo-Angular4/master/img/validation-login.jpg "Login validation")
+
+- phone verification
+![alt text](https://raw.githubusercontent.com/mksolemn/user_management_system-demo-Angular4/master/img/validation-login.jpg "Login validation")
+
+### User Roles
+Depending on logged in user role certain UI elements are not visible and routes blocked.
+
+- superadmin view
+![alt text](https://github.com/mksolemn/user_management_system-demo-Angular4/blob/master/img/roles-superadmin.jpg?raw=true "Superadmin view")
+
+- admin view
+![alt text](https://github.com/mksolemn/user_management_system-demo-Angular4/blob/master/img/roles-admin.jpg?raw=true "Admin view")
+
+### Forms
+For this project only reactive forms were used, some fields must be generated dynamically from response received from REST api. To reduce duplicate code update and create are the same forms, when update functionality is fired forms is automatically pre-populated with data and styled accordingly. Forms are modal - this allows calling any form component from any route/page.
+
+- create organisation form
+![alt text](https://github.com/mksolemn/user_management_system-demo-Angular4/blob/master/img/form-create-organisation.jpg?raw=true "Create organisation modal")
+
+- create user form
+![alt text](https://github.com/mksolemn/user_management_system-demo-Angular4/blob/master/img/form-create-user.jpg?raw=true "Create user modal")
+
+- update user form
+![alt text](https://github.com/mksolemn/user_management_system-demo-Angular4/blob/master/img/form-user-update.jpg?raw=true "Update user modal")
+
+- update api key user
+![alt text](https://github.com/mksolemn/user_management_system-demo-Angular4/blob/master/img/form-update-api-user.jpg?raw=true "Update api key user modal")
+
+### User list pages
+Each user list page allows to update/delete/disable/enable user and for api user additionally allows to generate api key. UI basically the same.
+
+![alt text](https://github.com/mksolemn/user_management_system-demo-Angular4/blob/master/img/api-user-page.jpg?raw=true "Update api key user modal")
 
 ## Example managing user roles with directives:
 Managing visible elements - should ony be used for small pieces of code, since it's not structural directive like ngIf.
 For this project I used this directive to hide element like buttons, table rows, links, texts.
-
-## DEMO preview
-[Watch functionality DEMO (presetation only)](https://i.imgur.com/ItvRimL.gifv "Application DEMO video")
 
 ##### role-permissions.directive.ts
 ```javascript
@@ -185,3 +225,5 @@ export class AuthCodeGuard implements CanActivate {
 ## Project structure
 
 ![alt text](https://i.imgur.com/wyo1ulS.png "Structure")
+
+### For code preview/demo - contact mksolemn@gmail.com
